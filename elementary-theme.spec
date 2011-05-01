@@ -1,7 +1,7 @@
 %define tarname	elementary-theme
 %define name	elementary-theme
 %define version	2.4
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary:	Elementary theme
 Name:		%{name}
@@ -13,6 +13,8 @@ Group:		Graphical desktop/Other
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires: 	murrine
+Requires:	gtk-aurora-engine
+Suggests:	elementary-icons
 
 %description
 Elementary theme.
