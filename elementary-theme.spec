@@ -1,13 +1,15 @@
 %define tarname	elementary-theme
 %define name	elementary-theme
 %define version	2.4
-%define release %mkrel 4
+%define release %mkrel 5
 
 Summary:	Elementary theme
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
 Source0:	%{tarname}-%{version}.tar.gz
+#Theme for openbox
+Source1:	%{tarname}-openbox.tar.gz
 #fix scrollbar issues
 Patch0:		elementary-ooo-lo.patch
 #fix color for complete view with kde4 rosa theme
@@ -24,7 +26,7 @@ Suggests:	elementary-icons
 Elementary theme.
 
 %prep
-%setup -q
+%setup -q -a1
 %patch0 -p0
 %patch1 -p0
 
