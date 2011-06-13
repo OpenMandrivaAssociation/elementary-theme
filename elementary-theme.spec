@@ -1,14 +1,17 @@
 %define tarname	elementary-theme
 %define name	elementary-theme
 %define version	2.4
-%define release %mkrel 3
+%define release %mkrel 4
 
 Summary:	Elementary theme
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
 Source0:	%{tarname}-%{version}.tar.gz
+#fix scrollbar issues
 Patch0:		elementary-ooo-lo.patch
+#fix color for complete view with kde4 rosa theme
+Patch1:		mdk_rosa_theme.patch
 License:	GPLv2
 Group:		Graphical desktop/Other
 BuildArch:	noarch
@@ -23,6 +26,7 @@ Elementary theme.
 %prep
 %setup -q
 %patch0 -p0
+%patch1 -p0
 
 %install
 %__rm -rf %{buildroot}
