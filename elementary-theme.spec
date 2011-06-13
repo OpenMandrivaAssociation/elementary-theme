@@ -1,13 +1,14 @@
 %define tarname	elementary-theme
 %define name	elementary-theme
 %define version	2.4
-%define release %mkrel 2
+%define release %mkrel 3
 
 Summary:	Elementary theme
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
 Source0:	%{tarname}-%{version}.tar.gz
+Patch0:		elementary-ooo-lo.patch
 License:	GPLv2
 Group:		Graphical desktop/Other
 BuildArch:	noarch
@@ -21,6 +22,7 @@ Elementary theme.
 
 %prep
 %setup -q
+%patch0 -p0
 
 %install
 %__rm -rf %{buildroot}
