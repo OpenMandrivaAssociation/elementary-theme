@@ -13,7 +13,7 @@ Source1:	%{tarname}-openbox.tar.gz
 #fix scrollbar issues
 #Patch0:		elementary-ooo-lo.patch
 #fix color for complete view with kde4 rosa theme
-Patch1:		mdk_rosa_theme.patch
+#Patch1:		mdk_rosa_theme.patch
 License:	GPLv2
 Group:		Graphical desktop/Other
 BuildArch:	noarch
@@ -28,7 +28,7 @@ Elementary theme.
 %prep
 %setup -q -a1
 #%patch0 -p0
-%patch1 -p0
+#%patch1 -p0
 
 %install
 %__rm -rf %{buildroot}
