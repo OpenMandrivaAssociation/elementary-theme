@@ -1,7 +1,7 @@
 %define tarname	elementary-theme
 %define name	elementary-theme
 %define version	2.4
-%define release %mkrel 6
+%define release %mkrel 7
 
 Summary:	Elementary theme
 Name:		%{name}
@@ -14,11 +14,12 @@ Source1:	%{tarname}-openbox.tar.gz
 #Patch0:		elementary-ooo-lo.patch
 #fix color for complete view with kde4 rosa theme
 #Patch1:		mdk_rosa_theme.patch
+Patch2:		elementary-theme-2.4.scrollbar-color.patch
 License:	GPLv2
 Group:		Graphical desktop/Other
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-Requires: 	murrine
+Requires:	murrine
 Requires:	gtk-aurora-engine
 Suggests:	elementary-icons
 
@@ -27,8 +28,13 @@ Elementary theme.
 
 %prep
 %setup -q -a1
-#%patch0 -p0
-#%patch1 -p0
+#% patch0 -p0
+#% patch1 -p0
+
+# elementary-theme-2.4.scrollbar-color.patch
+%patch2 -p1 -b .color
+
+%build
 
 %install
 %__rm -rf %{buildroot}
