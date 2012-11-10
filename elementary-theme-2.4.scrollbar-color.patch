@@ -1,0 +1,11 @@
+--- elementary-theme-2.4/elementary/gtk-2.0/gtkrc.color	2011-07-15 11:37:45.000000000 +0400
++++ elementary-theme-2.4/elementary/gtk-2.0/gtkrc	2011-08-12 20:20:30.405157258 +0400
+@@ -392,8 +392,6 @@ style "murrine-scrollbar" {
+ #		trough_shades	    = {1.00,1.00}
+ 
+ colorize_scrollbar = TRUE
+-
+-scrollbar_color = "#6DAA53" 
+   }
+ }
+ 
