@@ -1,5 +1,5 @@
 Summary:	Elementary theme
-Name:		elemenary-theme
+Name:		elementary-theme
 Version:	2.4
 Release:	8
 License:	GPLv2
