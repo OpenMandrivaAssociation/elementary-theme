@@ -1,7 +1,7 @@
 Summary:	Elementary theme
 Name:		elementary-theme
 Version:	2.4
-Release:	8
+Release:	9
 License:	GPLv2
 Group:		Graphical desktop/Other
 Source0:	%{name}-%{version}.tar.gz
